@@ -1,0 +1,7 @@
+az account set --subscription "00000000-0000-0000-0000-000000000000"
+
+az group create --location UKSouth --name SqlSat927-TF-Backend-RG
+
+az storage account create --name "sqlsat927tfbackend" --resource-group SqlSat927-TF-Backend-RG --location UKSouth --sku Standard_GRS
+
+az storage container create --name "sqlsat927" --account-name "sqlsat927tfbackend"
